@@ -1,0 +1,30 @@
+duel:
+  # Radius of the duel zone around the midpoint (blocks)
+  zone-radius: 15
+  # Seconds before a challenge expires
+  challenge-timeout: 30
+  # Seconds of countdown before duel starts
+  countdown: 5
+  # Whether to restore health/hunger/inventory on duel end
+  restore-state: true
+  # Whether to drop honor token on death (false = just give to winner)
+  drop-token: true
+  # Token drop location: MIDPOINT or LOSER
+  token-drop-location: LOSER
+
+messages:
+  prefix: '&8[&6⚔ AngelDuel&8] &r'
+  challenge-sent: '&eYou challenged &a%player%&e to a duel! They have &6%timeout%s&e to accept.'
+  challenge-received: '&a%challenger% &ehas challenged you to a duel! Type &6/duelaccept &eor &c/dueldecline&e.'
+  challenge-expired: '&cThe duel challenge has expired.'
+  duel-accepted: '&aDuel accepted! Starting in &6%countdown%&a seconds...'
+  duel-start: '&c&lDUEL START! &r&eFight with honor!'
+  duel-winner: '&6&l%winner% &r&ewins the duel! Honor token awarded.'
+  duel-honor-token: '&aYou received an &6Honor Token&a from &e%loser%&a!'
+  no-challenge: '&cYou have no pending duel challenge.'
+  already-dueling: '&cYou are already in a duel.'
+  player-not-found: '&cPlayer not found or offline.'
+  cannot-self-challenge: '&cYou cannot challenge yourself.'
+  zone-boundary: '&c&lYou cannot leave the duel zone!'
+  third-party-blocked: '&cA duel is in progress here. You cannot interfere!'
+  duel-fled: '&c%player% fled the duel zone and forfeited!'

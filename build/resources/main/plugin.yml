@@ -1,0 +1,30 @@
+name: AngelDuel
+version: '1.0.0'
+main: me.angelique.angelDuel.AngelDuel
+api-version: '1.21'
+description: Duelist's Code - Honor-based PvP dueling system
+authors: [Angelique]
+
+commands:
+  challenge:
+    description: Challenge another player to a duel
+    usage: /challenge <player>
+    aliases: [duel]
+  duelaccept:
+    description: Accept a pending duel challenge
+    usage: /duelaccept
+  dueldecline:
+    description: Decline a pending duel challenge
+    usage: /dueldecline
+  duelleaderboard:
+    description: View the duel honor leaderboard
+    usage: /duelleaderboard
+    aliases: [duellb, honorboard]
+
+permissions:
+  angelduel.challenge:
+    description: Allows player to challenge others
+    default: true
+  angelduel.leaderboard:
+    description: Allows viewing the leaderboard
+    default: true
