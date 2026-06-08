@@ -4,6 +4,7 @@ main: me.angelique.angelDuel.AngelDuel
 api-version: '1.21'
 description: Duelist's Code - Honor-based PvP dueling system
 authors: [Angelique]
+softdepend: [AngelNCore]
 
 commands:
   challenge:

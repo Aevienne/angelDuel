@@ -3,6 +3,8 @@ package me.angelique.angelDuel.managers;
 import me.angelique.angelDuel.AngelDuel;
 import me.angelique.angelDuel.models.DuelSession;
 import me.angelique.angelDuel.models.DuelState;
+import me.angelique.angelNCore.events.DuelCompletedEvent;
+import me.angelique.angelNCore.events.EventBus;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.title.Title;
 import org.bukkit.*;
@@ -229,6 +231,8 @@ public class DuelManager {
             Bukkit.getServer().broadcast(Component.text(winMsg));
             plugin.getLeaderboardManager().recordWin(winnerUUID, winner.getName());
             plugin.getLeaderboardManager().recordLoss(loserUUID, loser.getName());
+            String duelId = session.getChallenger() + ":" + session.getChallenged();
+            EventBus.publish(new DuelCompletedEvent(duelId, winner.getName(), loser.getName()));
         }
     }
 
