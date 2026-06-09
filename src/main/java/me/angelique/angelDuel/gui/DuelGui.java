@@ -18,8 +18,8 @@ import java.util.*;
 
 public final class DuelGui {
 
-    public static final String TITLE = TextUtil.color("&8Duels &7\u2014 &cHonor Arena");
-    public static final String CHALLENGE_TITLE = TextUtil.color("&8Challenge &7\u2014 &aSelect Opponent");
+    public static final String TITLE = TextUtil.color("&cHonor Arena");
+    public static final String CHALLENGE_TITLE = TextUtil.color("&aSelect Opponent");
     static final int SIZE = 45;
 
     private DuelGui() {}
