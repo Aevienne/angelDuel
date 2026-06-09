@@ -4,6 +4,8 @@ import me.angelique.angelDuel.commands.ChallengeCommand;
 import me.angelique.angelDuel.commands.DuelAcceptCommand;
 import me.angelique.angelDuel.commands.DuelDeclineCommand;
 import me.angelique.angelDuel.commands.DuelLeaderboardCommand;
+import me.angelique.angelDuel.gui.DuelGui;
+import me.angelique.angelDuel.gui.DuelListener;
 import me.angelique.angelDuel.listeners.DuelCombatListener;
 import me.angelique.angelDuel.listeners.DuelZoneListener;
 import me.angelique.angelDuel.managers.DuelManager;
@@ -47,6 +49,7 @@ public final class AngelDuel extends JavaPlugin {
     private void registerListeners() {
         getServer().getPluginManager().registerEvents(new DuelCombatListener(this), this);
         getServer().getPluginManager().registerEvents(new DuelZoneListener(this), this);
+        getServer().getPluginManager().registerEvents(new DuelListener(this), this);
     }
 
     public static AngelDuel getInstance() {

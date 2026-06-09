@@ -1,6 +1,7 @@
 package me.angelique.angelDuel.commands;
 
 import me.angelique.angelDuel.AngelDuel;
+import me.angelique.angelDuel.gui.DuelGui;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -26,7 +27,7 @@ public class ChallengeCommand implements CommandExecutor {
             return true;
         }
         if (args.length < 1) {
-            player.sendMessage(AngelDuel.colorize("&cUsage: /challenge <player>"));
+            DuelGui.open(player, plugin);
             return true;
         }
         if (plugin.getDuelManager().isInDuel(player.getUniqueId())) {

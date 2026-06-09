@@ -51,6 +51,14 @@ public class DuelManager {
         return pendingChallenges.get(uuid);
     }
 
+    public Map<UUID, DuelSession> getActiveDuels() {
+        return activeDuels;
+    }
+
+    public int getPendingChallengeCount() {
+        return pendingChallenges.size();
+    }
+
     public void sendChallenge(Player challenger, Player challenged) {
         DuelSession session = new DuelSession(challenger.getUniqueId(), challenged.getUniqueId());
 
